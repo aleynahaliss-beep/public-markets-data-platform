@@ -1,0 +1,8 @@
+dimension,rules_evaluated,rules_passing,rules_failing_critical,rules_warning,rule_pass_rate_pct,failing_records
+Accuracy,2,0,2,0,0.0,6
+Timeliness,2,0,0,2,0.0,7
+Completeness,8,4,1,3,50.0,8
+Integrity,4,2,2,0,50.0,72
+Uniqueness,7,4,3,0,57.1,6
+Validity,14,8,5,1,57.1,11
+Consistency,3,2,1,0,66.7,4

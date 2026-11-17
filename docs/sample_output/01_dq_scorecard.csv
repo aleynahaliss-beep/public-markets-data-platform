@@ -1,0 +1,21 @@
+dataset,rule_id,rule_name,dimension,severity,failed_rows,total_rows,fail_pct,status,rank_in_dataset
+collateral,COL_003,Collateral balance is as of the run date,Timeliness,WARNING,1,9,11.111,WARN,1
+counterparties,CPT_002,LEI is 20 upper-case alphanumeric characters,Validity,WARNING,1,12,8.333,WARN,1
+counterparties,CPT_003,Credit rating is populated,Completeness,WARNING,1,12,8.333,WARN,1
+instruments,INS_008,Sector is populated,Completeness,WARNING,2,40,5.0,WARN,1
+instruments,INS_003,ISIN has valid format and ISO 6166 check digit,Validity,CRITICAL,1,40,2.5,FAIL,2
+instruments,INS_004,ISIN is unique across instruments,Uniqueness,CRITICAL,1,40,2.5,FAIL,2
+instruments,INS_005,Currency is populated,Completeness,CRITICAL,1,40,2.5,FAIL,2
+instruments,INS_007,Asset class is a recognised value,Validity,CRITICAL,1,40,2.5,FAIL,2
+prices,PRC_005,No stale price (5 identical closes in a row),Timeliness,WARNING,6,11998,0.05,WARN,1
+prices,PRC_006,Price exists for every instrument on every business day,Completeness,WARNING,4,12000,0.033,WARN,2
+prices,PRC_001,Close price is present and positive,Validity,CRITICAL,2,11998,0.017,FAIL,3
+prices,PRC_003,One price per instrument per date,Uniqueness,CRITICAL,2,11998,0.017,FAIL,3
+prices,PRC_004,No isolated price spike (> 40% move that reverses),Accuracy,CRITICAL,2,11998,0.017,FAIL,3
+trades,TRD_006,Instrument exists in the validated instrument master,Integrity,CRITICAL,70,703,9.957,FAIL,1
+trades,TRD_004,Quantity is positive,Validity,CRITICAL,5,703,0.711,FAIL,2
+trades,TRD_005,Settlement date is on or after trade date,Consistency,CRITICAL,4,703,0.569,FAIL,3
+trades,TRD_009,Price within 10% of trade-date close,Accuracy,CRITICAL,4,703,0.569,FAIL,3
+trades,TRD_002,Trade ID is unique (first delivery wins),Uniqueness,CRITICAL,3,703,0.427,FAIL,5
+trades,TRD_007,Counterparty exists in the validated counterparty master,Integrity,CRITICAL,2,703,0.285,FAIL,6
+trades,TRD_003,Side is BUY or SELL,Validity,CRITICAL,1,703,0.142,FAIL,7

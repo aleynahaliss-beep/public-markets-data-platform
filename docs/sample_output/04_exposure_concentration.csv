@@ -1,0 +1,13 @@
+counterparty_id,counterparty_name,rating,csa_flag,ead_estimate_usd,share_pct,cumulative_share_pct,bucket
+CP04,Counterparty D,A,Y,716277.4,29.86,29.86,top-80%
+CP02,Counterparty B,AA,Y,355125.16,14.81,44.67,top-80%
+CP03,Counterparty C,A,Y,313430.6,13.07,57.73,top-80%
+CP07,Counterparty G,,Y,167567.12,6.99,64.72,top-80%
+CP09,Counterparty I,BB,Y,166820.31,6.95,71.67,top-80%
+CP08,Counterparty H,BBB,Y,154236.43,6.43,78.1,top-80%
+CP11,Counterparty K,B,N,135897.21,5.67,83.77,tail
+CP10,Counterparty J,BB,N,108009.08,4.5,88.27,tail
+CP12,Counterparty L,B,N,101881.91,4.25,92.52,tail
+CP06,Counterparty F,BBB,Y,101589.27,4.24,96.76,tail
+CP05,Counterparty E,A,Y,44696.45,1.86,98.62,tail
+CP01,Counterparty A,AA,Y,33135.01,1.38,100.0,tail

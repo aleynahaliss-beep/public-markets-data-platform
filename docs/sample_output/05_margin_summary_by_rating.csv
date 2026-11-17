@@ -1,0 +1,7 @@
+rating,counterparties,calls,returns,no_csa,total_call_usd,total_return_usd,uncollateralised_exposure_usd
+A,3,1,0,0,220000.0,0.0,431810.84
+B,2,0,0,2,0.0,0.0,69907.38
+AA,2,0,1,0,0.0,60000.0,41382.29
+BBB,2,0,1,0,0.0,105000.0,0.0
+BB,2,0,1,1,0.0,50000.0,0.0
+UNRATED,1,0,1,0,0.0,85000.0,0.0

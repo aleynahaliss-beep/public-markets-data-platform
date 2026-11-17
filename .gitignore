@@ -1,0 +1,21 @@
+# generated locally (reproducible: `make run`)
+data/
+output/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# os / editors
+.DS_Store
+.idea/
+.vscode/

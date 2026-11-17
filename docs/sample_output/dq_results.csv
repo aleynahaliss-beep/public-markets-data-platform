@@ -1,0 +1,41 @@
+dataset,rule_id,rule_name,dimension,severity,total_rows,failed_rows,fail_rate,max_fail_rate,status
+instruments,INS_001,Instrument ID is populated,Completeness,CRITICAL,40,0,0.0,0.0,PASS
+instruments,INS_002,Instrument ID is unique,Uniqueness,CRITICAL,40,0,0.0,0.0,PASS
+instruments,INS_003,ISIN has valid format and ISO 6166 check digit,Validity,CRITICAL,40,1,0.025,0.0,FAIL
+instruments,INS_004,ISIN is unique across instruments,Uniqueness,CRITICAL,40,1,0.025,0.0,FAIL
+instruments,INS_005,Currency is populated,Completeness,CRITICAL,40,1,0.025,0.0,FAIL
+instruments,INS_006,Currency is in the supported ISO 4217 list,Validity,CRITICAL,40,0,0.0,0.0,PASS
+instruments,INS_007,Asset class is a recognised value,Validity,CRITICAL,40,1,0.025,0.0,FAIL
+instruments,INS_008,Sector is populated,Completeness,WARNING,40,2,0.05,0.0,WARN
+instruments,INS_009,Bonds carry a future maturity date,Consistency,CRITICAL,40,0,0.0,0.0,PASS
+instruments,INS_010,Price multiplier is positive,Validity,CRITICAL,40,0,0.0,0.0,PASS
+counterparties,CPT_001,Counterparty ID is populated and unique,Uniqueness,CRITICAL,12,0,0.0,0.0,PASS
+counterparties,CPT_002,LEI is 20 upper-case alphanumeric characters,Validity,WARNING,12,1,0.083333,0.0,WARN
+counterparties,CPT_003,Credit rating is populated,Completeness,WARNING,12,1,0.083333,0.0,WARN
+counterparties,CPT_004,csa_flag is Y or N,Validity,CRITICAL,12,0,0.0,0.0,PASS
+counterparties,CPT_005,"CSA counterparties carry threshold, MTA and rounding",Completeness,CRITICAL,12,0,0.0,0.0,PASS
+prices,PRC_001,Close price is present and positive,Validity,CRITICAL,11998,2,0.000167,0.0,FAIL
+prices,PRC_002,Price references a known instrument,Integrity,CRITICAL,11998,0,0.0,0.0,PASS
+prices,PRC_003,One price per instrument per date,Uniqueness,CRITICAL,11998,2,0.000167,0.0,FAIL
+prices,PRC_004,No isolated price spike (> 40% move that reverses),Accuracy,CRITICAL,11998,2,0.000167,0.0,FAIL
+prices,PRC_005,No stale price (5 identical closes in a row),Timeliness,WARNING,11998,6,0.0005,0.0,WARN
+prices,PRC_006,Price exists for every instrument on every business day,Completeness,WARNING,12000,4,0.000333,0.0,WARN
+fx_rates,FXR_001,FX rate is positive,Validity,CRITICAL,1200,0,0.0,0.0,PASS
+fx_rates,FXR_002,One rate per currency per date,Uniqueness,CRITICAL,1200,0,0.0,0.0,PASS
+trades,TRD_001,Trade ID is populated,Completeness,CRITICAL,703,0,0.0,0.0,PASS
+trades,TRD_002,Trade ID is unique (first delivery wins),Uniqueness,CRITICAL,703,3,0.004267,0.0,FAIL
+trades,TRD_003,Side is BUY or SELL,Validity,CRITICAL,703,1,0.001422,0.0,FAIL
+trades,TRD_004,Quantity is positive,Validity,CRITICAL,703,5,0.007112,0.0,FAIL
+trades,TRD_005,Settlement date is on or after trade date,Consistency,CRITICAL,703,4,0.00569,0.0,FAIL
+trades,TRD_006,Instrument exists in the validated instrument master,Integrity,CRITICAL,703,70,0.099573,0.0,FAIL
+trades,TRD_007,Counterparty exists in the validated counterparty master,Integrity,CRITICAL,703,2,0.002845,0.0,FAIL
+trades,TRD_008,Trade date is not in the future,Validity,CRITICAL,703,0,0.0,0.0,PASS
+trades,TRD_009,Price within 10% of trade-date close,Accuracy,CRITICAL,703,4,0.00569,0.0,FAIL
+trades,TRD_010,Trade currency matches instrument currency,Consistency,CRITICAL,703,0,0.0,0.0,PASS
+trades,TRD_011,Status is a recognised lifecycle value,Validity,CRITICAL,703,0,0.0,0.0,PASS
+settlements,SET_001,Trade ID is populated,Completeness,CRITICAL,667,0,0.0,0.0,PASS
+settlements,SET_002,One settlement record per trade,Uniqueness,CRITICAL,667,0,0.0,0.0,PASS
+settlements,SET_003,Settled quantity is positive,Validity,CRITICAL,667,0,0.0,0.0,PASS
+collateral,COL_001,Counterparty exists in the validated master,Integrity,CRITICAL,9,0,0.0,0.0,PASS
+collateral,COL_002,Collateral balance is non-negative,Validity,CRITICAL,9,0,0.0,0.0,PASS
+collateral,COL_003,Collateral balance is as of the run date,Timeliness,WARNING,9,1,0.111111,0.0,WARN

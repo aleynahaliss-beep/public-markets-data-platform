@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "public-markets-data-platform"
+version = "1.0.0"
+description = "PySpark + SQL data-quality, reconciliation and risk analytics for public-markets data (synthetic data)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyspark>=3.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+filterwarnings = ["ignore::FutureWarning", "ignore::UserWarning", "ignore::RuntimeWarning", "ignore::DeprecationWarning"]
